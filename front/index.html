@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koperasi Siswa SMP Fatahillah Lohbener</title>
+    <link rel="icon" href="Gambar/logosmpfata.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            color: black;
+        }
+
+        .navbar .nav-link {
+            color: white;
+        }
+
+        .navbar .nav-link:hover {
+            color: black;
+            background-color: yellow;
+        }
+        .header {
+            background-image: url('Gambar/kopsmpfata.png');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            padding: 50px 0;
+        }
+        .btn-primary {
+            background-color: rgb(227, 207, 29);
+            border-color: black;
+        }
+        .card {
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            padding: 25px;
+            background-color: #0e122a;
+            color: white;
+        }
+
+        .footer-section a {
+            color: #55acee;
+            text-decoration: none;
+        }
+        .carousel {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .slider {
+            display: flex;
+            scroll-snap-type: x mandatory; 
+            overflow-x: auto;
+            scrollbar-width: none;
+            -ms-overflow-style: none; 
+        }
+
+        .slider::-webkit-scrollbar {
+            display: none;
+        }
+
+        .slide {
+            flex: none; 
+            width: 100%;
+            scroll-snap-align: start; 
+            position: relative;
+        }
+
+        .slide img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .caption {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            max-width: 50%;
+        }
+
+        .caption h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .caption p {
+            margin: 5px 0 0;
+            font-size: 16px;
+        }
+    .carousel .prev, .carousel .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        font-size: 24px;
+        padding: 10px;
+        cursor: pointer;
+        border: none;
+        z-index: 100;
+    }
+
+    .carousel .prev {
+        left: 10px;
+    }
+
+    .carousel .next {
+        right: 10px;
+    }
+    .ekstrakurikuler {
+        background-color: #00164f; 
+        padding: 50px 90px;
+        color: white;
+        text-align: left; 
+    }
+
+    .ekstrakurikuler h2 {
+        color: white;
+        margin-bottom: 20px;
+        font-size: 28px;
+        text-transform: uppercase;
+        border-left: 4px solid #007bff; 
+        padding-left: 10px; 
+    }
+
+    .activities {
+        display: flex;
+        gap: 50px;
+        overflow-x: auto; 
+        white-space: nowrap; 
+        padding-bottom: 10px; 
+    }
+
+    .activity {
+        background-color: #ffffff;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        width: 250px;
+        flex: 0 0 auto; 
+    }
+
+    .activity img {
+        width: 100%;
+        height: 170px;
+        object-fit: cover;
+    }
+
+    .activity h3 {
+        margin: 0;
+        padding: 10px;
+        font-size: 18px;
+        color: #00164f;
+        background-color: #f4f4f4;
+    }
+    @media (max-width: 768px) {
+        .slides img {
+            height: 250px;
+        }
+        .activity {
+            width: 150px;
+        }
+    }
+    @media (max-width: 768px) {
+        .footer {
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="header text-white">
+        <h1><br></h1>
+        <p><br></p>
+    </div>
+    <nav class="navbar navbar-expand-lg" style="background-color: rgb(0, 5, 72); color: white;">
+        <div class="container-fluid">
+            <div class="navbar-nav mx-auto">
+                <a class="nav-link" href="index.html">Beranda</a>
+                <a class="nav-link" href="produk.php">Produk</a>
+                <a class="nav-link" href="tentangkami.html">Tentang Kami</a>
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Galeri</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="galerisekolah.html">Galeri Sekolah</a></li>
+                        <li><a class="dropdown-item" href="galeriekskul.html">Galeri Esktrakurikuler</a></li>
+                        <li><a class="dropdown-item" href="galeriproduk.html">Galeri Produk</a></li>
+                    </ul>
+                </div>
+                <a class="nav-link" href="kontak.php">Kontak</a>
+            </div>
+        </div>
+    </nav>
+    <section class="carousel">
+        <div class="slider">
+            <div class="slide">
+                <img src="Gambar/fata1.jpg" alt="Tentang SMAN 1 Lohbener">
+                <div class="caption">
+                    <h2>Tentang SMP Fatahillah Lohbener</h2>
+                    <p>SMP Fatahillah Lohbener merupakan Sekolah Menengah Pertama yang ada di Lohbener, Indramayu.</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="Gambar/fata3.jpg" alt="Fasilitas Modern">
+                <div class="caption">
+                    <h2>Fasilitas</h2>
+                    <p>Merupakan sekolah swasta dengan pendidikan terbaik di wilayah Lohbener.</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="Gambar/fata9.jpg" alt="Fasilitas Modern">
+                <div class="caption">
+                    <h2>Guru Interaktif</h2>
+                    <p>Guru-guru yang interaktif dan memberikan pendidikan moral pada siswa.</p>
+                </div>
+            </div>
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+    </section>
+
+    <section class="ekstrakurikuler">
+        <h2><strong>Ekstrakurikuler</h2>
+        <div class="activities">
+            <a href="voli.html" class="activity">
+                <img src="Gambar/volisaloh.jpg" alt="Voli">
+                <h3>Voli</h3>
+            <a href="basket.html" class="activity">
+                <img src="Gambar/basketsaloh3.jpg" alt="Basket">
+                <h3>Basket</h3>
+            </a>
+            </a>
+            <a href="paskibra.html" class="activity">
+                <img src="Gambar/paskibrasaloh.jpg" alt="Paskibra">
+                <h3>Paskibra</h3>
+            </a>
+            <a href="tari.html" class="activity">
+                <img src="Gambar/tarisalohr.jpg" alt="Tari">
+                <h3>Tari</h3>
+            </a>
+            <a href="tarungderajat.html" class="activity">
+                <img src="Gambar/tarungsaloh.jpg" alt="Tarung Derajat">
+                <h3>Tarung Derajat</h3>
+            </a>
+            <a href="kesenian.html" class="activity">
+                <img src="Gambar/paskibrasaloh.jpg " alt="Tari">
+                <h3>Kesenian</h3>
+            </a>
+        </div>
+    </section>
+
+    <div class="container">
+        <section>
+            <h2><strong>Berita Terkini</strong></h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <a href="berita1.html" style="text-decoration: none; color: inherit;">
+                        <div class="card">
+                            <img src="Gambar/fata2.jpg" class="card-img-top" alt="Tim Basket">
+                            <div class="card-body">
+                                <h5 class="card-title">SMP Fatahillah Lohebener mengadakan
+                                    Studi Tour ke jogja loh!</h5>
+                                <p class="card-text">Indramayu, SMP Fatahillah Lohbener - Studi Tour 
+                                    ke Jogja oleh...</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="berita2.html" style="text-decoration: none; color: inherit;">
+                        <div class="card">
+                            <img src="Gambar/fata5.jpg" class="card-img-top" alt="Tim Basket">
+                            <div class="card-body">
+                                <h5 class="card-title">Salah satu SMP di Lohbener yang banyak mencetak prestasi.</h5>
+                                <p class="card-text">Indramayu, SMP Fatahillah Lohbener - Jejak 
+                                    prestasi yang...</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="berita3.html" style="text-decoration: none; color: inherit;">
+                        <div class="card">
+                            <img src="Gambar/fata66.jpg" class="card-img-top" alt="Tim Basket">
+                            <div class="card-body">
+                                <h5 class="card-title">Selamat Hari Guru! Guru adalah pembelajar
+                                sepanjang hayat!</h5>
+                                <p class="card-text">Indramayu, SMP Fatahillah Lohbener - Selamat hari 
+                                    Guru tanpamu...</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-section">
+            <h3>Tentang SMP 
+                <br>Fatahillah Lohbener</h3>
+            <p>Alamat : Jl. Lohbener No.3, 
+                <br>Lohbener, Kec. Lohbener, 
+                <br>Kabupaten Indramayu, 
+                <br>Jawa Barat 452522
+                </p>
+            <p>NPSN : 20215937 </a></p>
+            <p>Facebook : SMP Fatahillah
+            <br>Lohbener Indramayu</p>
+        </div>
+        <div class="footer-section">
+            <h3>Referensi SMP
+                <br>Fatahillah Lohbener
+            </h3>
+            <iframe src="https://www.youtube.com/embed/w6rLD9bYCzk?si=k1fAvASeHcxLcV2d" title="YouTube video player" width="300" height="169" frameborder="0"></iframe>
+        </div>
+        <div class="footer-section">
+            <h3>Maps SMP
+                <br>Fatahillah Lohbener
+            </h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2844.6397645769707!2d108.27812347317015!3d-6.401405462604563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6eb87cb5a1ce39%3A0x710f924844bfad6d!2sMI%20Pui%20Fatahillah%20Lohbener!5e1!3m2!1sid!2sus!4v1732599303792!5m2!1sid!2sus"></iframe>
+        </div>
+    </footer>
+    <div class="footer">
+        <p>
+            <center>_________________________________________________________________________________________<br>
+                <br>SMP Fatahillah Lohbener | Jl. Lohbener No.3 - Lohbener - Indramayu <br>
+            Design by <a href="kenara.html">Kelompok Kenara</a></center>
+        </p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

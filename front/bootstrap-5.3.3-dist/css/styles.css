@@ -1,0 +1,114 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Styling */
+.navbar {
+    color: black;
+}
+
+.navbar .nav-link {
+    color: white 
+}
+
+.navbar .active-nav-link {
+    color: black;
+    background-color: yellow;
+}
+
+.navbar .nav-link:hover {
+    color: black;
+    background-color: yellow;
+}
+
+/* Content Padding */
+.content {
+    padding: 20px;
+}
+
+/* Header with background image */
+.header {
+    background-image: url('../../kopsmpfata.png');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Button Styling */
+.btn-primary {
+    background-color: rgb(227, 207, 29);
+    border-color: black;
+}
+
+/* Card Styling */
+.card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* General container styling */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form styling */
+/* Footer styling */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #0e122a;
+    color: white;
+}
+
+.footer-section a {
+    color: #55acee;
+    text-decoration: none;
+}
+
+/* Fix for grid-based layout */
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Kontainer Form */
+form {
+    width: 100%; /* Mengambil seluruh lebar kontainer */
+    max-width: 600px; /* Batasi lebar maksimum pada desktop */
+    margin: 0 auto; /* Pusatkan form */
+    padding: 20px;
+}
+
+/* Input Form */
+input[type="text"], input[type="email"], input[type="password"], textarea {
+    width: 100%; /* Ambil seluruh lebar dari kontainer */
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #eaeaea;
+}
+
+/* Agar tampilan responsif pada mobile */
+@media (max-width: 768px) {
+    form {
+        padding: 15px;
+        max-width: 100%; /* Agar pada mobile lebar form mengikuti layar */
+    }
+
+    input[type="text"], input[type="email"], input[type="password"], textarea {
+        font-size: 0.9em; /* Sesuaikan ukuran teks pada layar kecil */
+    }
+}
